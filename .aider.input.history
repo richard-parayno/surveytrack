@@ -1,3 +1,9 @@
 
 # 2024-11-22 22:55:42.417823
 +y
+
+# 2024-11-22 23:18:32.680856
++/ask i already put this repo up as a public github repo. do i need to do anything special on github to ensure that only I can commit to the main branch?
+
+# 2024-11-22 23:20:46.736651
++/ask i see this setting, should i enable it: Do not allow bypassing the above settings The above settings will apply to administrators and custom roles with the "bypass branch protections" permission. 
