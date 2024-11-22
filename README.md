@@ -1,7 +1,7 @@
 # surveytrack
 
 Surveytrack is an open-source tool for research teams to bundle multiple surveys and track participant progress across survey sets. 
-This tool was created by @richard-parayno to support the research efforts of [UXPH](https://uxph.org), the largest non-profit organization by and for the Filipino design community. 
+This tool was created by [richard-parayno](https://github.com/richard-parayno) to support the research efforts of [UXPH](https://uxph.org), the largest non-profit organization by and for the Filipino design community. 
 
 The project is currently under active development, so expect breaking changes. 
 
