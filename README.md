@@ -14,3 +14,13 @@ The project is currently under active development, so expect breaking changes.
 2. Clone the repo, `cd` into it, and run `bundle install`.
 3. After running `bundle install`, you can start the development server by running `bin/dev`. Surveytrack should now be running in `localhost:3000`.
 
+## Todos
+[ ] User Authentication
+[ ] Admin functionalities
+[ ] Invite team
+[ ] Creating a research project
+[ ] Adding surveys to a research project
+
+### Nice to haves
+[ ] PostHog integration
+[ ] Landing Page
