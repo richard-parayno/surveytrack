@@ -1,4 +1,9 @@
-<div>
-  <h1 class="font-bold text-4xl">Dashboard#show</h1>
-  <p>Find me in app/views/dashboard/show.html.erb</p>
+<div class="w-full">
+  <div class="flex flex-row justify-between">
+    <h1 class="font-bold text-4xl">Welcome to surveytrack</h1>
+    <%= button_to "Logout", session_path, method: :delete, 
+      class: "px-2 py-2 text-white text-center bg-red-500 cursor-pointer hover:bg-red-800 transition"%>
+  </div>
+  <%= render partial: "flash" %>
+  <p>Hey there, <%= @current_user.email_address %>!</p>
 </div>

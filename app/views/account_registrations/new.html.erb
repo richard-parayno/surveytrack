@@ -1,4 +1,40 @@
 <div>
-  <h1 class="font-bold text-4xl">AccountRegistrations#new</h1>
-  <p>Find me in app/views/account_registrations/new.html.erb</p>
+  <h1 class="font-bold text-4xl">Create a surveytrack account</h1>
+  <%= form_with model: @user, url: account_registrations_path,
+    class: "flex flex-col mt-4" do |form| %>
+    <%# fields %>
+    <%= form.email_field :email_address,
+      required: true,
+      autofocus: true,
+      placeholder: "Enter your email address",
+      class: "shadow border-b text-stone-300 border-stone-600 outline-none px-3 py-2 mt-2 w-full"
+    %>
+    <%= form.password_field :password,
+      required: true,
+      placeholder: "Create a password",
+      class: "shadow border-b text-stone-300 border-stone-600 outline-none px-3 py-2 mt-2 w-full"
+    %>
+    <%= form.password_field :password_confirmation,
+      required: true,
+      placeholder: "Confirm your password",
+      class: "shadow border-b text-stone-300 border-stone-600 outline-none px-3 py-2 mt-2 w-full mb-2"
+    %>
+    <% if @user.errors.any? %>
+      <div class="bg-red text-red-500 px-3 py-2 rounded-lg">
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="flex flex-row gap-x-2 items-center mt-4">
+      <%= form.submit "Create account",
+        class: "px-2 py-2 text-white text-center bg-blue-500 hover:bg-blue-800 transition"
+      %>
+      <%= link_to "Already have an account? Sign in", new_session_path, 
+        class: "text-white underline hover:no-underline" 
+      %>
+    </div>
+  <% end %>
 </div>

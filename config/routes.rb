@@ -4,13 +4,13 @@ Rails.application.routes.draw do
 
   get "account_registrations/new"
   get "account_registrations/create"
-  get "dashboard/show"
-  get "home/index"
+  get "dashboard/show", as: :dashboard
+  get "home/index", as: :home
 
   # Auth routes
   resource :account_registrations, only: [:new, :create]
-  resource :session
-  resources :passwords, param: :token
+  resource :session, only: [:new, :create, :destroy]
+  resources :passwords, only: [:new, :create, :update], param: :token
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
