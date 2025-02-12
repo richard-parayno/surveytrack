@@ -1,0 +1,2 @@
+module AccountRegistrationsHelper
+end
